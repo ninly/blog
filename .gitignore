@@ -1,6 +1,7 @@
 #Custom
 output
 pelicanconf_local.py
+publish.sh
 
 #Python
 *.py[cod]

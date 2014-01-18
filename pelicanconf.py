@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Jackson Ninly'
-SITENAME = u'ninly\'s bog'
+SITENAME = u'ninly&rsquo;s bog'
 SITEURL = 'http://ninly.github.io'
 DESCRIPTION = 'A nice, quiet bog; I mean blog'
 EMAIL_ADDRESS = 'j@ninly.net'
@@ -13,27 +13,28 @@ TWITTER_ADDRESS = 'http://twitter.com/ninly'
 TIMEZONE = 'CST6CDT'
 
 DEFAULT_LANG = u'en'
+DEFAULT_DATE_FORMAT = '%d %B %Y'
 
 THEME = '/home/ninly/proj/blog/themes/cebong-dark'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+TAG_FEED_ATOM = 'feeds/tag/%s.atom.xml'
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS =  (('Pelican', 'http://getpelican.com/'),
-          ('illruminations', 'http://illruminations.com/'),
+LINKS =  (('illruminations', 'http://illruminations.com/'),
           ('commandlinefu.com', 'http://www.commandlinefu.com/'))
 
 # Social widget
-SOCIAL = (('Github', 'https://github.com/ninly'),
-          ('Twitter', 'https://twitter.com/ninly'),
-          ('G+', 'https://plus.google.com/107352213567911231966/posts'),
+SOCIAL = (('github', 'https://github.com/ninly'),
+          ('twitter', 'https://twitter.com/ninly'),
+          ('g+', 'https://plus.google.com/+JasonConklin'),
           ('last.fm', 'https://last.fm/ninly'),
-          ('Tumblr', 'https://ninly.tumblr.com'),
-          ('Soundcloud', 'https://soundcloud.com/ninly'),
-          ('Bandcamp', 'https://semiautomaticgroundenvironment.bandcamp.com'))
+          ('tumblr', 'https://ninly.tumblr.com'),
+          ('soundcloud', 'https://soundcloud.com/ninly'),
+          ('bandcamp', 'https://semiautomaticgroundenvironment.bandcamp.com'))
 
 DEFAULT_PAGINATION = 10
 
