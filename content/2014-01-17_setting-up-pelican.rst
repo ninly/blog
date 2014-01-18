@@ -6,8 +6,7 @@ Setting up Pelican
 :slug: setting-up-pelican
 :author: ninly
 
-So here it is, a blog, live and already loaded with some content! Like
-magic.
+So here it is, a blog, live and loaded with some content! Like magic.
 
 I will not go into much detail here about the setup of this site or how
 I got here, but a few resources did help me quite a bit along the way.
@@ -25,23 +24,24 @@ Among them (and I've probably missed a one or two):
 
 * `Dedi Purwanto`_, mostly for the theme_, but nice blog, too :)
 
-In practice, the real work had more to do with deciding how to host and
-organize my content, and recommendations are thin for that sort of
-thing. That seems appropriate to a static-site generator such as
+In practice, the real work had more to do with deciding how to host
+and organize my content, and recommendations are thin for that sort
+of thing. That seems appropriate to a static-site generator such as
 pelican. The whole point: you do it however you want. It's not *that*
 hard, after all.
 
-As such, assuming this project sticks around awhile, it will probably be
-a casual work in progress for some time. Since what I'm after is a
-simple dumping ground for ideas, development progress, and makery
+As such, assuming this project sticks around awhile, it will probably
+be a casual work in progress for some time. Since what I'm after is
+a simple dumping ground for ideas, development progress, and makery
 learnings, I hope to remain focused more on content and ideas, rather
-than packaging and presentation. But please contact me if you have any
-recommendations or notice something I've obviously overlooked.
+than packaging and presentation (except insofar as these constitute
+makery learnings). But do contact me if you have any recommendations
+or notice something I've obviously overlooked.
 
-A few honorable mentions and bookmarks: these are blog posts and
-articles about pelican, static-site generators, and devblogging in
-general that I didn't use explicitly when initially setting up this
-site, but which I've been reading and expect to come back to:
+A few honorable mentions and bookmarks: blog posts and articles about
+pelican, static-site generators, and devblogging in general that I
+didn't use explicitly when initially setting up this site, but which
+I've come across and expect to come back to:
 
 * Helder Correira's `From Wordpress to Pelican`_
 
