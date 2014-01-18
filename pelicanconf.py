@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Jackson Ninly'
 SITENAME = u'ninly\'s bog'
-SITEURL = ''
+SITEURL = 'http://ninly.github.io'
 DESCRIPTION = 'A nice, quiet bog; I mean blog'
 EMAIL_ADDRESS = 'j@ninly.net'
 GITHUB_ADDRESS = 'http://github.com/ninly'
