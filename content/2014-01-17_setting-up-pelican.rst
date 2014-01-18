@@ -20,7 +20,8 @@ Among them (and I've probably missed a one or two):
 
 * `Terri Yu`_, whose post also helped me muck through the pelican setup
 
-* `How to use Pelican on GitHub Pages`_, by Josef Jezek
+* `How to use Pelican on GitHub Pages`_, by Josef Jezek, with additional
+  details about ghp-import in `these tips`_ from the Pelican docs
 
 * `Dedi Purwanto`_, mostly for the theme_, but nice blog, too :)
 
@@ -52,6 +53,8 @@ site, but which I've been reading and expect to come back to:
 .. _Duncan Lock: http://duncanlock.net/blog/2013/05/17/how-i-built-this-website-using-pelican-part-1-setup/ 
 
 .. _How to use Pelican on GitHub Pages: https://gist.github.com/josefjezek/6053301
+
+.. _these tips: https://github.com/getpelican/pelican/blob/master/docs/tips.rst 
 
 .. _Dedi Purwanto: http://kecebongsoft.com/
 
