@@ -15,7 +15,7 @@ TIMEZONE = 'CST6CDT'
 DEFAULT_LANG = u'en'
 DEFAULT_DATE_FORMAT = '%d %B %Y'
 
-THEME = '/home/ninly/proj/blog/themes/cebong-dark'
+THEME = '/home/ninly/src/projects/blog/themes/cebong-dark'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
