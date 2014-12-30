@@ -1,0 +1,69 @@
+Taking the Eudyptula Challenge
+==============================
+
+:date: 2014-03-28 22:10
+:tags: linux-kernel, eudyptula
+:slug: eudyptula-challenge
+:author: ninly
+
+It wasn't so long ago that I was pounding away on my Matasano Challenge
+code, and thinking about how I might write about the progress I was
+making. It was abstract, though -- progress to be sure, but a lot of
+the kind of thing you seem to learn when looking back at code you keyed
+several months prior. Painful in some ways, enlightening study in
+others.
+
+I had already been distracted once, hence the several months. Somewhere
+in the midst of a *real* course I had to take in a *real* school
+(Matasano's efforts and organization are real, of course, but I didn't
+have to pay them money or depend on a certain grade for economic
+reasons) and the crush of raising a couple of infants who don't know
+a whole lot about cryptography or programming, my code fell to the
+wayside. I still hope to get back to it one day.
+
+But something else happened recently, even as I was starting
+to delve back into the Matasano stuff. A `new challenge
+<http://eudyptula-challenge.org/>`_, modeled on Matasano's approach, but
+geared toward Linux kernel hacking and many of the practical intricacies
+involved with the Linux kernel workflow: coding style, patch submission,
+and so on, as well as the long slog of learning how an operating system
+actually *works*.
+
+I found out about Eudyptula last month and signed right up. My free time
+has been wrapped around that axle ever since. Unfortunately, that means
+I'm not investing time in active FOSS projects or code I can share,
+which was a thing with Matasano, too. But I'm working on a foundation.
+
+I'm still fascinated with cryptography, both practical and theoretical,
+and the kinds of tasks that Matasano was throwing at me were also
+especially useful in getting my head around some day-to-day code
+organization and workflow. But *system programming* has always been a
+deeper interest of mine than some of the common learn-to-code tutorial
+stuff out there these days. My day job involves embedded systems and
+their designers, too, and I always had a strong inpulse for at least
+the idea of actually *developing* the kinds of real-time systems I
+test and troubleshoot. But learning the low level has often felt
+pretty slow-going, and I haven't found a whole lot of programmatic,
+goal-oriented guidance. Eudyptula's little penguin seems, so far, to be
+providing just what I needed.
+
+That's not to say he's making it *easy*; it's still slow-going. But
+that's because the Linux kernel is massive and mindbogglingly complex.
+There's a sense of *progress*, though, of what to read next, of what I'm
+missing. And #kernelnewbies (an IRC channel) is providing a good amount
+of assistance and perspective, too. There is a sense of goal in it all,
+too: The introductory email in the series suggests that after completing
+the exercises one should be equipped, if not to *be* a kernel subsystem
+maintainer (heavens forbid!), at least to understand what the heck it is
+they do, and to be an active developer.
+
+And in addition to all that personal practical coolness, we're talking
+about the Linux kernel: one of the most significant collaborative
+efforts in the history of cooperation. Perplexing at times, not without
+its barbs and pitfalls, but an effective sort of juggernaut that we all
+use and benefit from every day, whether or not we know it or think about
+it. And in its own interest of longevity, that juggernaut has produced
+this little spinoff; it's pretty exciting to be plugged into that.
+
+
+
