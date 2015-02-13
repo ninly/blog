@@ -17,6 +17,7 @@ DEFAULT_DATE_FORMAT = '%d %B %Y'
 
 THEME = '/home/ninly/src/projects/blog/themes/cebong-dark'
 
+STATIC_PATHS = ['images']
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 TAG_FEED_ATOM = 'feeds/tag/%s.atom.xml'
@@ -28,7 +29,8 @@ LINKS =  (('illruminations', 'http://illruminations.com/'),
           ('commandlinefu.com', 'http://www.commandlinefu.com/'))
 
 # Social widget
-SOCIAL = (('github', 'https://github.com/ninly'),
+SOCIAL = (('keybase', 'https://keybase.io/ninly'),
+          ('github', 'https://github.com/ninly'),
           ('twitter', 'https://twitter.com/ninly'),
           ('g+', 'https://plus.google.com/+JasonConklin'),
           ('last.fm', 'https://last.fm/ninly'),
