@@ -143,28 +143,28 @@ For Locke's own notebook (in part because orthography was just
 different, and possibly Latin, in those days) he omitted/merged a few
 initials -- J and I, for instance, share a bucket in his system --
 bringing the number of potential initials down to 20. This enabled Locke
-to construct a convenient 4X5 grid of consonants which, when folded with
-the 5 vowels, rendered a 100-slot hash space. Locke describes using
-black and read lead to draw the resulting table in the beginning of his
+to construct a convenient 4X5 grid of initial letters which, when folded
+with the 5 vowels, rendered a 100-slot hash space. Locke describes using
+black and red lead to draw the resulting table in the beginning of his
 notebook which, along with a few additional techniques for pagination
 and pageflow, would serve as `its index
 <http://idmaa.org/wp-content/uploads/2013/03/Brian-J.-McNely-2.jpg>`_,
-much as a hash table does in database or other software. Note that this
+much as a hash table does in database or other software. (Note that this
 page is from a *printed* book explaining and illustrating how he did it,
-whereas the technique itself was a manual one.
+whereas the technique itself was a manual one.)
 
 When a heading is added to the notebook to accommodate new quotations or
-notes, it would be "hashed" (mentally) and the page number of the copy
+notes, it would be hashed (mentally) and the page number of the copy
 would be added to the corresponding slot in the hash table. Before
 creating a new heading, Locke would consult his index to see if he had
-already begun an page under that hash, and if so the copy would go
-there. Upon filling a spread, Locke would continue copying not on then
+already begun an page under that hash, and if so the copy would go there
+instead. Upon filling a spread, Locke would continue copying not on the
 next page (which might already have content), but on the *next blank
 spread*, adding references to the new page number to the bottom of the
-filled page and to the front-matter index. By allowing headings to
-leapfrog each other, this method both minimizes page waste and tends to
-keep newer and more active material closer the last-filled pages of the
-book.
+just-filled page *and* to the front-matter index. By allowing headings
+to leapfrog each other, this method both minimizes page waste and tends
+to keep newer and more active material closer the last-filled pages of
+the book.
 
 Analysis of the Hash Function
 -----------------------------
@@ -173,33 +173,34 @@ I discovered and researched all of this with consideration of making a
 commonplace book for my own use, and I wondered if Locke's method would
 work for me as effectively as it did for many in the 18th century.
 
-By standards of today's usage of hash functions, Locke's is beyond
-rudimentary. It has a grossly nonuniform distribution (being lashed to
-natural-language letter frequencies), and is thus riddled with the
-likelihood of collisions (see further analysis below). But it has an
+Granted, by standards of today's usage of hash functions, Locke's is
+beyond rudimentary. It has a grossly nonuniform distribution (being
+lashed to natural-language letter frequencies), and is thus riddled with
+the likelihood of collisions (see further analysis below). But it has an
 interesting property that no passable modern hash has (or needs): it is
-*intuitive*.  That is to say, Locke (or anyone who used a similar
-method) could run across an interesting idea about algorithms, and think
-"Hmm, *Algorithms*...  **A**... (*l*...  *g*...) **o**..." and
-immediately look up all the pages in his notebook where he or she might
-have copied or taken notes under *Algorithms*. Certainly, those entries
-might be interspersed with entries about *Arrows*, *Atomism*,
-*Astronomy*, and any other headings that hash to **Ao**, but barring a
-terribly unlucky distribution of headwords, this does not seem like a
-major issue for a notebook-sized repository. It may even be considered a
-feature, if maintaining a commonplace book is also considered as an
-opportunity to make unexpected connections or explore and reflect on
-one's passage through reading.
+*intuitive*. That is to say, Locke (or anyone who used a similar method)
+might run across an interesting idea about algorithms, and think "Hmm,
+*Algorithms*...  **A**... (*l*...  *g*...) **o**..." and immediately
+look up all the pages in his notebook where he or she might have copied
+or taken notes under *Algorithms*. Certainly, those entries might be
+interspersed with entries about *Arrows*, *Atomism*, *Astronomy*, and
+any other headings that hash to **Ao**, but barring a terribly unlucky
+distribution of headwords, this does not seem like a major issue for a
+notebook-sized repository. It may even be considered a feature, if
+maintaining a commonplace book is also seen as an opportunity to make
+unexpected connections or explore and reflect on one's passage through
+reading.
 
 Further Analysis
 ----------------
 
 To get a sense of how bad Locke's hash distribution really is, I wrote
 some code to hash an input list of words and keep track of the hash
-table for some simple analysis. I then fed it a list of the 10,000 most
-commonly used words per Google n-grams -- which is admittedly probably
-not representative of words likely to end up as headings in someone's
-commonplace book.
+table for some simple analysis. I then fed it a list of the `10,000 most
+commonly used words
+<https://github.com/first20hours/google-10000-english>`_ per Google
+n-grams -- which is admittedly probably not representative of words
+likely to end up as headings in someone's commonplace book.
 
 Here's a histogram of the distribution (made using bitly's sweet little
 `data_hacks`_ commandline tools), with the 100 slots divided into 20 bins::
@@ -265,7 +266,7 @@ A few ideas, none of them new, to take away from all this exploration:
    ones, including fixtures of computer science such as string hashing
    and databases.
 
-In a future post I may present a bit more analysis and exploration of
-Locke's function, offer some tweaks to improve its distribution, and
-reflect on my own experience with a commonplace book. Until then, agile
-reading!
+In a future post I hope to present a bit more analysis and exploration
+of Locke's function, offer some tweaks to improve its distribution, and
+reflect on my own experience with a commonplace book. I'll also try to
+clean up my hash-analysis code to share. Until then, agile reading!
