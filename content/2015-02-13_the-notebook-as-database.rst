@@ -18,14 +18,15 @@ Commonplace Books
 -----------------
 
 If you are not familiar with the reading practices of the Renaissance
-and the early modern periods, a *commonplace book* was essentially a
+and the early modern periods, a *commonplace book* is essentially a
 notebook, kept by habitual readers, for hand-copying quotations from
-their reading. Such quotations would be entered under headings that were
-governed in part by the worldview of the day -- the "common places" (the
-word comes from *locis communis* in Latin, or *topos koinos* in Greek,
-and the technique descends from the copybooks used in studying those
-languages). Later on, as literacy spread to greater populations, the
-practice morphed toward something more like the modern scrapbook.
+their reading. Such quotations are entered under headings -- the "common
+places" (the word comes from *locis communis* in Latin, or *topos
+koinos* in Greek, and the technique descends from the copybooks used in
+studying those languages) -- that in Renaissance/Enlightenment practice
+were governed in part by the worldview of the day. Later on, as literacy
+spread to greater populations, the practice morphed toward something
+more like the modern scrapbook.
 
 This is a rich and varied topic; much has been written about
 commonplacing as a technique for interacting with one's reading and, as
