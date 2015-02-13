@@ -256,7 +256,7 @@ Stay tuned...
 A few ideas, none of them new, to take away from all this exploration:
 
 1. Commonplacing is an interesting technique, possibly worth
-   reconsidering for personal use.
+   considering for personal use in some form(s).
 
 2. John Locke was kind of cool, and had influential ideas that turn up in
    unexpected places.
