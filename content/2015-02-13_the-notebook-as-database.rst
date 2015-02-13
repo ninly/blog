@@ -77,28 +77,28 @@ when the reference was needed, and possibly even keep their heads above
 water in making personal sense out of so much information.
 
 Essentially, it was a technique for *cataloging* information that has made
-a personal inmpression.
+a personal impression.
 
 Locke's hash function
 ---------------------
 
-This all sort of caught my imagination because when I learned about how
+All of this sort of caught my imagination because when I learned about how
 and why commonplace books were kept, I kept thinking of the whole thing
 as like a "manual database" for personal reading.
 
-The practice of commonplacing was stoked when, in 1685, Enlightenment
-thinker John Locke published a method he had devised for organizing
-entries into his own commonplace book. Essentially, he added a technique
-of *indexing* to the *cataloging* that was already inherent in
-commonplacing technique. But because a commonplace book is (a) a
-physical book, and (b) essentially a work-in-progress, its headings
-chosen on the fly as one cleaves headlong through a sea of text,
-preparing one's commonplace notebook presented a challenge -- one didn't
-know in advance precisely what ideas would be making an impression, and
-thus what headings would be needed, without taking a shot in the dark.
-Some did try -- presuming that their copying would fit into a
-religiously or philosophically determined rubric. There is more
-interesting history here, but I'll not delve into it.
+With that in mind, I learned that the practice of commonplacing was
+stoked when, in 1685, Enlightenment thinker John Locke published a
+method he had devised for organizing entries in his own commonplace
+books. Essentially, he added a technique of *indexing* to the
+*cataloging* that was already inherent in commonplacing technique. But
+because a commonplace book is (a) a physical book, and (b) essentially a
+work-in-progress, its headings chosen on the fly as one cleaves headlong
+through a sea of text, preparing one's commonplace notebook presented a
+challenge -- one didn't know in advance precisely what ideas would be
+making an impression, and thus what headings would be needed, without
+taking a shot in the dark.  Some did try -- presuming that their copying
+would fit into a religiously or philosophically determined rubric.
+There is more interesting history here, but I'll not delve into it.
 
 Locke's method cinched my comparison with a database: he basically
 invented a rudimentary hash function, and put a hash table in the front
@@ -112,8 +112,9 @@ function in the predigital world. Let me know if you know of anything.
 
 Locke's method is described in some detail `here with quotations from Locke <http://www.historyofinformation.com/expanded.php?id=3744>`__
 himself. See also this `facsimile and transcription <http://pds.lib.harvard.edu/pds/view/13925922>`__
-of the book where his method was originally published. I'm calling it the
-*Lockean hash*, and in short, this is how it works:
+of the book where his method was originally published. I'm calling the
+hashing part of his method the *Lockean hash*, and in short, this is how
+it works:
 
 Given a commonplace heading (Locke calls it a Head, and his example is
 'Epistle'),
