@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>ninly’s bog</title><link href="http://ninly.github.io/" rel="alternate"></link><link href="http://ninly.github.io/feeds/tag/blog.atom.xml" rel="self"></link><id>http://ninly.github.io/</id><updated>2014-01-17T03:30:00-06:00</updated><entry><title>Setting up Pelican</title><link href="http://ninly.github.io/posts/2014/01/setting-up-pelican/" rel="alternate"></link><updated>2014-01-17T03:30:00-06:00</updated><author><name>ninly</name></author><id>tag:ninly.github.io,2014-01-17:posts/2014/01/setting-up-pelican/</id><summary type="html">&lt;p&gt;So here it is, a blog, live and loaded with some content! Like magic.&lt;/p&gt;
+&lt;p&gt;I will not go into much detail here about the setup of this site or how
+I got here, but a few resources did help me quite a bit along the way.
+Among them (and I've probably missed a one or two):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://getpelican.com/"&gt;Pelican itself&lt;/a&gt;, of course&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://duncanlock.net/blog/2013/05/17/how-i-built-this-website-using-pelican-part-1-setup/"&gt;Duncan Lock&lt;/a&gt;, whose post got me down the road a good long way -- but
+who still owes us a Part 2!&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://terriyu.info/blog/posts/2013/07/pelican-setup/"&gt;Terri Yu&lt;/a&gt;, whose post also helped me muck through the pelican setup&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gist.github.com/josefjezek/6053301"&gt;How to use Pelican on GitHub Pages&lt;/a&gt;, by Josef Jezek, with additional
+details about ghp-import in &lt;a class="reference external" href="https://github.com/getpelican/pelican/blob/master/docs/tips.rst"&gt;these tips&lt;/a&gt; from the Pelican docs&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://kecebongsoft.com/"&gt;Dedi Purwanto&lt;/a&gt;, mostly for the &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/cebong"&gt;theme&lt;/a&gt;, but nice blog, too :)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In practice, the real work had more to do with deciding how to host
+and organize my content, and recommendations are thin for that sort
+of thing. That seems appropriate to a static-site generator such as
+pelican. The whole point: you do it however you want. It's not &lt;em&gt;that&lt;/em&gt;
+hard, after all.&lt;/p&gt;
+&lt;p&gt;As such, assuming this project sticks around awhile, it will probably
+be a casual work in progress for some time. Since what I'm after is
+a simple dumping ground for ideas, development progress, and makery
+learnings, I hope to remain focused more on content and ideas, rather
+than packaging and presentation (except insofar as these constitute
+makery learnings). But do contact me if you have any recommendations
+or notice something I've obviously overlooked.&lt;/p&gt;
+&lt;p&gt;A few honorable mentions and bookmarks: blog posts and articles about
+pelican, static-site generators, and devblogging in general that I
+didn't use explicitly when initially setting up this site, but which
+I've come across and expect to come back to:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Helder Correira's &lt;a class="reference external" href="http://heldercorreia.com/blog/from-wordpress-to-pelican"&gt;From Wordpress to Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Geoff Gimse's intriguingly titled &lt;a class="reference external" href="http://www.textandhubris.com"&gt;Text and Hubris&lt;/a&gt; (several posts,
+but the &lt;a class="reference external" href="http://www.textandhubris.com/tag/pelican"&gt;pelican-tagged articles&lt;/a&gt; are a place to start)&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="blog"></category></entry><entry><title>call("o muse");</title><link href="http://ninly.github.io/posts/2014/01/call-o-muse/" rel="alternate"></link><updated>2014-01-01T10:20:00-06:00</updated><author><name>ninly</name></author><id>tag:ninly.github.io,2014-01-01:posts/2014/01/call-o-muse/</id><summary type="html">&lt;p&gt;I didn't actually write this post on New Year's Day, nor does this blog have much to do with the new year, but it's a convenient and timely starting point. So,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello world!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I think I'm like a lot of people who use static-blog engines (pelican, jekyll, etc.), in that I'm no longer very thrilled with available hosted services. Intermittently, I've wanted a place to record thoughts and progress specifically related to my efforts to learn technological skills, particularly coding and electronics. To that end, I'm not really looking for the kind of &amp;quot;social&amp;quot; experience offered by a Blogger, Tumblr, or Twitter -- but on the other hand, I'd like something more dynamic, versioned, and publicly accessible than personal pen-and-paper diary or development notebook. I'd like an easy way both to look back over what I've done and how far I have (or haven't) come with a project, as well as an easy resource to share with people who may be interested in that progress.&lt;/p&gt;
+&lt;p&gt;As such, don't look here for subtle, crafted prose and public relations. Just notes, some thoughts, nods to the helpful posts and pages of other developers, and probably a few bookmark-like links to help me remember helpful resources. However, you are welcome here; If any of this content is helpful to you, then all the more benefit!&lt;/p&gt;
+</summary><category term="blog"></category></entry></feed>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>ninly’s bog</title><link href="http://ninly.github.io/" rel="alternate"></link><link href="http://ninly.github.io/feeds/tag/crypto.atom.xml" rel="self"></link><id>http://ninly.github.io/</id><updated>2014-01-31T18:30:00-06:00</updated><entry><title>Matasano Crypto Challenges, Exercise 13</title><link href="http://ninly.github.io/posts/2014/01/matasano-crypto-challenge-13/" rel="alternate"></link><updated>2014-01-31T18:30:00-06:00</updated><author><name>ninly</name></author><id>tag:ninly.github.io,2014-01-31:posts/2014/01/matasano-crypto-challenge-13/</id><summary type="html">&lt;p&gt;I started up this blog as a place to muse on current tech projects and
+share what I'm doing and learning. Then I went and got re-mired in my
+Matasano code, which I can't share.&lt;/p&gt;
+&lt;p&gt;Last spring, on a tip from &lt;a class="reference external" href="http://illruminations.com/"&gt;Steve&lt;/a&gt;, I spent a bunch of time working on the then-brand-new
+&lt;a class="reference external" href="http://www.matasano.com/articles/crypto-challenges/"&gt;Matasano Crypto Challenges&lt;/a&gt;, which you should go read about if you're
+not already familiar.&lt;/p&gt;
+&lt;p&gt;It was perfect for me in a lot of ways. In addition to my longstanding
+interest in things cryptological, it was a perfect venue to try my hand
+at more &amp;quot;practical&amp;quot; code, as I described in a &lt;a class="reference external" href="http://ninly.github.io/posts/2014/01/pip-and-virtualenv-sans-magic/"&gt;previous post&lt;/a&gt;. The
+exercises are (more or less) graded, and in many cases tell you roughly
+how you're going to approach the goal. I plugged at the first set of
+exercises for a few days, and felt like I'd wrapped my head around
+something new. I finished the first set and received the second, and
+things got even more interesting.&lt;/p&gt;
+&lt;p&gt;Without revealing any content, I'll say that exercise 12 was
+particularly fun, engaging, and rewarding to accomplish. I felt quite a
+bit of momentum, and ready to tackle whatever came at me.&lt;/p&gt;
+&lt;p&gt;Then, I hit exercise 13. I got stuck.&lt;/p&gt;
+&lt;p&gt;I think the exercise assumed a certain level of practical familiarity
+with web-transaction infrastructure. &lt;a class="footnote-reference" href="#id2" id="id1"&gt;[*]&lt;/a&gt; User authentication, cookies,
+that sort of thing. I know more or less how that stuff works, but have
+little hands-on experience actually implementing them for a production
+website. Building on what I'd learned from the exercises thus far, I
+quickly sort of painted myself into a corner, feeling like every avenue
+I pursued wound up a dead end.&lt;/p&gt;
+&lt;p&gt;Having a brand-new baby in the house also didn't help. Time devoted to
+the project evaporated for a time.&lt;/p&gt;
+&lt;p&gt;There was a HDD failure on my dev/hacking machine, too, but that's
+another post.&lt;/p&gt;
+&lt;p&gt;This week, after several months away from the code, I revisited the
+Matasano Crypto Challenges. I worked through my existing code, reminding
+myself what I'd done and how. I reimplemented a few functions, just to
+see if different ways to do things seemed cleaner or appealed more.
+Some did. And, as a lot of coders say, reading your own code months or
+years later can be painful, but also eye-opening.&lt;/p&gt;
+&lt;p&gt;Then I approached that sticky wicket, exercise 13, with a fresh mind. I
+didn't even look at the code I'd written for it; I just reread the
+assignment, and started coding.&lt;/p&gt;
+&lt;p&gt;I got my test code to pass yesterday. Turns out, it wasn't that bad.  My
+solution isn't perfect: I'm not entirely happy with some of the
+assumptions it makes (again, I'm trying not to reveal anything about the
+exercise content here), but it works, and at least I have something to
+improve on now.&lt;/p&gt;
+&lt;p&gt;And, best of all, now I get to think about exercise 14.&lt;/p&gt;
+&lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[*]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;See &lt;a class="reference external" href="https://blog.pinboard.in/2013/04/the_matasano_crypto_challenges/"&gt;this Pinboard blog post&lt;/a&gt; for a good description of the Matasano Crypto Challenges by someone who &lt;em&gt;does&lt;/em&gt; have that familiarity.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</summary><category term="crypto"></category></entry></feed>

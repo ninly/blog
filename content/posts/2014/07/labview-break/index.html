@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>LabVIEW Break!</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="http://ninly.github.io/theme/css/main.css" type="text/css" />
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="http://ninly.github.io/css/ie.css"/>
+                <script src="http://ninly.github.io/js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="http://ninly.github.io/css/ie6.css"/><![endif]-->
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://ninly.github.io">ninly&rsquo;s bog </a></h1>
+                <nav>
+                    <a href="http://ninly.github.io/pages/about-ninly.html">about ninly</a>&nbsp;
+                    <a href="http://ninly.github.io/category/misc">misc</a>&nbsp;
+                </nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="posts/2014/07/labview-break/" rel="bookmark"
+           title="Permalink to LabVIEW Break!">LabVIEW Break!</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-07-01T07:10:00">
+                01 July 2014
+        </abbr>
+<p>tags: <a href="http://ninly.github.io/tag/linux-kernel/">linux-kernel</a><a href="http://ninly.github.io/tag/labview/">labview</a></p></footer><!-- /.post-info -->      <p>As of a month or so ago I was still going strong with the Eudyptula
+Challenge tasks: building development kernels, hacking on dynamically
+loadable modules, exploring intricacies of git, and generally learning
+my way around the internal structures that make Linux tick.</p>
+<p>I had just begun to really dig into the whole idea of concurrency and
+the mechanisms (locking and so forth) and race condition caveats the
+kernel and its documentation have to offer. Then something came up.</p>
+<div class="section" id="cutscene-with-bbq">
+<h2>Cutscene with BBQ</h2>
+<p>Our local National Instruments LabVIEW User Group runs a pretty tight
+ship. I haven't used LabVIEW itself much (I have messed around with
+it quite a bit), but the test equipment I've been working with for
+the past couple of years runs on LabWindows/CVI -- NI's C environment
+(&quot;C with training wheels&quot;, a coworker of mine likes to say). So I'm
+not especially proficient in LabVIEW, but I do attend the user group
+meetings: There's usually a fairly interesting demonstration of its
+features or of some real-world deployment. The whole concept of dataflow
+programming is interesting to me for a few reasons, too, related in part
+to my longtime interest in audio processing -- cf. Pure Data, Max, even
+(going back a few extra years) Turbosynth.</p>
+<p>And I'd be lying if I told you the free barbecue they brought into the
+meetings wasn't a factor.</p>
+<p>Last year the user group offered its regular attendees the chance to
+take NI's CLAD certification exam at no cost. It took a little bit of
+study, but the CLAD is their entry-level certification. The exam is
+fairly basic, and I passed without much difficulty.</p>
+<p>If you're not familiar with LabVIEW, it's pretty neat stuff. It's
+a full-featured high-level language, but the development interface
+is based on the concept of <em>dataflow</em>. That is, instead of writing
+text-based code, you connect functional blocks together with graphical
+&quot;wires&quot;. It is used extensively in a number of industries, particularly
+in testing and industrial data-aquisition applications. If you're just a
+curious amateur the software isn't cheap, but if (like me) you work in
+an environment where it is available, it's worth checking out.</p>
+</div>
+<div class="section" id="would-you-like-an-exam-with-that">
+<h2>Would You Like an Exam with That?</h2>
+<p>This spring they offered a similar opportunity, but for people who
+aready have the CLAD certification they offered the CLD exam -- their
+full professional development certification.</p>
+<p>Great, I thought -- not a chance I should pass up. It normally costs
+about $400. <em>But</em>... the CLD is a far more challenging exam. It's geared
+not only to proficiency, but to <em>facility</em> with the software and its
+graphical language.</p>
+<p>It's a 4-hour practical exam. They shut you in a room, give you
+a sealed spec for an application of nontrivial complexity (typical
+textbook state machines -- modelling behavior of systems like ATMs,
+vending machines, and so forth -- but with a lot of real-world-like
+functions, constraints, and corner cases). Without any external
+references or breaks, you have to build a working application.</p>
+<p>Four hours may seem like a long time, but it's widely regarded as the
+most challenging aspect of the CLD exam. To implement the typically
+specified complexity in the time allotted, you really have to know
+your way around the software <em>and</em> be able to make quick decisions about
+how to implement the application's logic.</p>
+<p>There's not any wiggle room. You can't take breaks or use your phone. No
+Internet or reference manual is available (other than LabVIEW's built-in
+help). When time runs out, you save your code to a thumb drive, seal it
+in an envelope, and wait several weeks for an anonymous NI engineer to
+review your code. To fast-forward a bit: I took the exam back in May, and
+still haven't received my results.</p>
+</div>
+<div class="section" id="cram-time">
+<h2>Cram Time</h2>
+<p>As I mentioned, I haven't really used LabVIEW that much. When I heard that I
+could take the CLD exam for free, and that I only had a few weeks to prepare...
+I did a quick deep-dive into some LabVIEW books, familiarizing myself with some
+of the conventions and best practices for more intricate applications (things
+like event-driven logic, queued state machines, and producer-consumer
+frameworks, among others).</p>
+<p>I learned a ton, but I would be shocked if I passed. That is really OK
+-- getting the certification would have been lovely, but the experience
+of preparing for and taking the exam were my primary goals. I got a
+whole lot out of it, not only in that little bout of self-training, but the
+exam itself was pretty eye-opening, too. Not only will I be far better
+prepared to approach the exam next time it is offered, but it has given
+me some ideas for things I could do with LabVIEW in the meantime.</p>
+</div>
+<div class="section" id="back-to-the-penguin">
+<h2>Back to the Penguin</h2>
+<p>Of course, through all of that, my kernel-coding efforts were on hold.
+Since the CLD exam, I've spent the last few weeks refamiliarizing myself
+with the Eudyptula Challenge task I was on when I set it down. It took
+less time than I feared to find my bearings; I had been in the middle of
+Task 8, and submitted it just the other day. From what I understand, it
+takes about a week for Little to respond to that one (one of the more
+complex tasks), so I'm using the downtime to run through kernel-build
+processes again, as that's a skill that tends to languish when I don't
+use it regularly, and it's been a while. I have a feeling I'll be using
+it again soon.</p>
+</div>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://illruminations.com/">illruminations</a></li>
+                            <li><a href="http://www.commandlinefu.com/">commandlinefu.com</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://ninly.github.io/" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="https://keybase.io/ninly">keybase</a></li>
+                            <li><a href="https://github.com/ninly">github</a></li>
+                            <li><a href="https://twitter.com/ninly">twitter</a></li>
+                            <li><a href="https://plus.google.com/+JasonConklin">g+</a></li>
+                            <li><a href="https://last.fm/ninly">last.fm</a></li>
+                            <li><a href="https://ninly.tumblr.com">tumblr</a></li>
+                            <li><a href="https://soundcloud.com/ninly">soundcloud</a></li>
+                            <li><a href="https://semiautomaticgroundenvironment.bandcamp.com">bandcamp</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                     Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://github.com/getpelican/pelican-themes" target="_blank">cebong</a>.
+                </address><!-- /#about -->
+
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>ninly’s bog</title><link href="http://ninly.github.io/" rel="alternate"></link><link href="http://ninly.github.io/feeds/tag/dependencies.atom.xml" rel="self"></link><id>http://ninly.github.io/</id><updated>2014-12-09T12:00:00-06:00</updated><entry><title>More virtualenv (sans) magic</title><link href="http://ninly.github.io/posts/2014/12/more-virtualenv-sans-magic/" rel="alternate"></link><updated>2014-12-09T12:00:00-06:00</updated><author><name>ninly</name></author><id>tag:ninly.github.io,2014-12-09:posts/2014/12/more-virtualenv-sans-magic/</id><summary type="html">&lt;p&gt;Several months back I was figuring out how to use pip and virtualenv,
+and generally having a pretty good time with my python development
+experience. However, I kept running into interesting code examples and
+projects that required matplotlib and the numpy/scipy stack. Since I've
+also been trying to get familiar with mathematical modeling, analysis
+and visualization techniques, these are indispensable dependencies.&lt;/p&gt;
+&lt;p&gt;I could (and had) play with them &amp;quot;raw&amp;quot;, but ran into problems when I
+tried to enjoy the control and isolation afforded by virtualenv. Last
+week, though, in one of my periodic attempts to comb through dependency
+installations, I stumbled on &lt;a class="reference external" href="https://gist.github.com/fyears/7601881"&gt;this gist&lt;/a&gt;, and it cleared up all my
+problems. I haven't delved into whatever reasons may have existed for my
+previous difficulties, but if you're having trouble, maybe it will help
+you. All I did was to set up a new virtual env and pip-install my way
+through the list. It... just worked, for the most part (thanks,
+&lt;a class="reference external" href="https://www.fyears.org/"&gt;fyears&lt;/a&gt;!), although I did have to update some fortran-compiler stuff
+that numpy needed.&lt;/p&gt;
+</summary><category term="python"></category><category term="dependencies"></category></entry></feed>

@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>ninly’s bog</title><link href="http://ninly.github.io/" rel="alternate"></link><link href="http://ninly.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ninly.github.io/</id><updated>2015-02-13T00:00:00-06:00</updated><entry><title>The Notebook as Database: John Locke, Commonplacing, and Hash Functions</title><link href="http://ninly.github.io/posts/2015/02/the-notebook-as-database/" rel="alternate"></link><updated>2015-02-13T00:00:00-06:00</updated><author><name>ninly</name></author><id>tag:ninly.github.io,2015-02-13:posts/2015/02/the-notebook-as-database/</id><summary type="html">&lt;p&gt;A couple of months ago I stumbled by happy accident onto the topic of
+&lt;em&gt;keeping a commonplace book&lt;/em&gt;, or &lt;em&gt;commonplacing&lt;/em&gt;. While this did call up
+vague memories of reading about commonplace books in my earlier life as
+a Humanities student, I had fully appreciated neither its power as a
+tool for memory and worldview-organization nor (and more to the point
+here) its kinship with a host of techniques used today for organizing
+large bodies of data.&lt;/p&gt;
+&lt;div class="section" id="commonplace-books"&gt;
+&lt;h2&gt;Commonplace Books&lt;/h2&gt;
+&lt;p&gt;If you are not familiar with the reading practices of the Renaissance
+and the early modern periods, a &lt;em&gt;commonplace book&lt;/em&gt; was essentially a
+notebook, kept by habitual readers, for hand-copying quotations from
+their reading. Such quotations would be entered under headings that were
+governed in part by the worldview of the day -- the &amp;quot;common places&amp;quot; (the
+word comes from &lt;em&gt;locis communis&lt;/em&gt; in Latin, or &lt;em&gt;topos koinos&lt;/em&gt; in Greek,
+and the technique descends from the copybooks used in studying those
+languages). Later on, as literacy spread to greater populations, the
+practice morphed toward something more like the modern scrapbook.&lt;/p&gt;
+&lt;p&gt;This is a rich and varied topic; much has been written about
+commonplacing as a technique for interacting with one's reading and, as
+I suggested above, organizing a worldview within a cultural context. As
+introduced by : TODO: cite source.&lt;/p&gt;
+&lt;blockquote&gt;
+Renaissance readers, writers, and speakers were well-trained in
+textual recycling, and one of their most powerful and pervasive
+tools was the ‘commonplace book’ - a collection of notes from
+reading and other sources that the compiler might want to recall,
+and reuse, at a later date. While the structure and purpose of these
+volumes varied enormously, they were distinguished from random
+collections of quotations (in theory, at least) by being gathered
+under conventional headings called loci communes or ‘common places’.
+As Ann Moss has explained, &amp;quot;The more elementary
+commonplace-books ... would be divided into sections under heads listing
+the main virtues and vices, and all their subsidiary manifestations.
+More advanced commonplace-books might have ambitious programmes for
+covering all knowledge, or they might be specialist repertories of
+excerpts relevant to specific disciplines&amp;quot; (&lt;em&gt;Printed
+Commonplace-Books and the Structuring of Renaissance Thought&lt;/em&gt;,
+Oxford: Clarendon Press, 1996, v). The headings could be tailored to
+an individual’s personal or professional needs, suggested by
+teachers, or bought in blank-books with printed headings and
+decorative borders - and readers who did not have the patience or
+the resources to gather their own entries could even buy a book with
+the quotations already printed or written in. &lt;a class="reference external" href="http://www.ampltd.co.uk/collections_az/RenCpbks-BL/editorial-introduction.aspx"&gt;[source]&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://3stages.org/quotes/cpb.html"&gt;Here&lt;/a&gt; are some other quotations
+about commonplace books -- a web search will turn up much more if you're
+interested in the historical context and practice. The noteworthy part
+for me here is the notion that the technique was a practice -- a
+technology -- related to &lt;em&gt;memory&lt;/em&gt;, an early-modern &lt;em&gt;ars memorativa&lt;/em&gt;,
+even. The &amp;quot;commonplacer&amp;quot; keeps notes for later review and use,
+whether to deploy in one's own writing (in a day when authoritative
+quotation had a completely different quality and import than it has
+today) or for organizing one's personal reception and perception of
+significant ideas, also to be reviewed when musing on one's development.&lt;/p&gt;
+&lt;p&gt;This practice grew in the early days of print media and widespread
+literacy, when the proliferation of text would have been as daunting as
+it was exciting to an avid reader (of course, cf. the parallels with
+today's networked explosion of content and its attendant big- and
+metadata). Agile readers used whatever methods they devised or found
+available to keep track and make sense of their reading amid this
+proliferation of text and idea, in hopes that they could dredge it up
+when the reference was needed.&lt;/p&gt;
+&lt;p&gt;Essentially, it was a technique for &lt;em&gt;cataloging&lt;/em&gt; information that has made
+a personal inmpression.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="locke-s-hash-function"&gt;
+&lt;h2&gt;Locke's hash function&lt;/h2&gt;
+&lt;p&gt;This all sort of caught my imagination because when I learned about how
+and why commonplace books were kept, I kept thinking of the whole thing
+as like a &amp;quot;manual database&amp;quot; for personal reading.&lt;/p&gt;
+&lt;p&gt;The practice of commonplacing was stoked when, in 1685, Enlightenment
+thinker John Locke published a method he had devised for organizing
+entries into his own commonplace book. Essentially, he added a technique
+of &lt;em&gt;indexing&lt;/em&gt; to the &lt;em&gt;cataloging&lt;/em&gt; that was already inherent in
+commonplacing technique. But because a commonplace book is (a) a
+physical book, and (b) essentially a work-in-progress, its headings
+chosen on the fly as one cleaves headlong through a sea of text,
+preparing one's commonplace notebook presented a challenge -- one didn't
+know in advance precisely what ideas would be making an impression, and
+thus what headings would be needed, without taking a shot in the dark.
+Some did try -- presuming that their copying would fit into a
+religiously or philosophically determined rubric. There is more
+interesting history here, but I'll not delve into it.&lt;/p&gt;
+&lt;p&gt;Locke's method cinched my comparison with a database: he basically
+invented a rudimentary hash function, and put a hash table in the front
+matter of his notebook. &lt;em&gt;Et voilà&lt;/em&gt;, the notebook as database!&lt;/p&gt;
+&lt;p&gt;I'm not familiar enough with the history of cataloging or information
+and organization to know if this had any direct precursors or cousins in
+contemporary practice, but I've been on the lookout for similar
+organizational practices, or other ideas that prefigured the modern hash
+function in the predigital world. Let me know if you know of anything.&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;/home/ninly/src/projects/blog/content/2015-02-13_the-notebook-as-database.rst&lt;/tt&gt;, line 2); &lt;em&gt;&lt;a href="#id1"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Duplicate explicit target name: &amp;quot;here&amp;quot;.&lt;/div&gt;
+&lt;p&gt;Locke's method is described in some detail
+&lt;a href="#id2"&gt;&lt;span class="problematic" id="id3"&gt;`here &amp;lt;http://www.historyofinformation.com/expanded.php?id=3744`_&lt;/span&gt;&lt;/a&gt;
+with quotations from Locke himself. A facsimile and transcription of the
+book where his method was originally published are
+&lt;a class="reference external" href="http://pds.lib.harvard.edu/pds/view/13925922"&gt;here&lt;/a&gt;
+But in short, this is how the hash function works:&lt;/p&gt;
+&lt;p&gt;Given a commonplace heading (Locke calls it a Head, and his example is
+'Epistle'), the gist is this:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Take the first letter of the heading (e.g. &lt;em&gt;Epistle&lt;/em&gt; -&amp;gt; &lt;strong&gt;E&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;Append to it the &lt;em&gt;next&lt;/em&gt; vowel that occurs in the heading (e.g. &lt;em&gt;Epistle&lt;/em&gt; -&amp;gt; &lt;strong&gt;Ei&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;If the word begins with a vowel but does not contain a subsequent
+vowel, double the initial (e.g. &lt;em&gt;Arts&lt;/em&gt; -&amp;gt; &lt;strong&gt;Aa&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Other cases are not covered, and because this isn't a comprehensive
+algorithm for an automated system, that would not cause much difficulty
+in the overall use case. The main exception I can think of -- a word
+with all consonants -- would probably never have been encountered (this
+was before the ubiquity of acronyms, after all). Many people would
+probably have organized their notes under Latin headings, too (Locke
+specifically recommends keeping it to &lt;em&gt;one&lt;/em&gt; language, an amusing hint at
+the kind of organizational challenges his scholarly contemporaries
+faced).  Notably, &lt;em&gt;y&lt;/em&gt;-as-a-vowel is not handled.&lt;/p&gt;
+&lt;p&gt;But here we are, with a number of &amp;quot;hash buckets&amp;quot; equal to the number of
+word-initial letters used, times five vowels.&lt;/p&gt;
+&lt;p&gt;For Locke's own notebook (in part because orthography was just
+different, and possibly Latin, in those days) he omitted/merged a few
+initials -- J and I, for instance, share a bucket in his system --
+bringing the number of potential initials down to 20. This enabled Locke
+to construct a convenient 4X5 grid of consonants which, when folded with
+the 5 vowels, rendered a 100-slot hash space. Locke describes using
+black and read lead to draw the resulting table in the beginning of his
+notebook which, along with a few additional techniques for pagination
+and pageflow, would serve as &lt;a class="reference external" href="http://idmaa.org/wp-content/uploads/2013/03/Brian-J.-McNely-2.jpg"&gt;its index&lt;/a&gt;,
+much as a hash table does in database or other software. Note that this
+page is from a &lt;em&gt;printed&lt;/em&gt; book explaining and illustrating how he did it,
+whereas the technique itself was a manual one.&lt;/p&gt;
+&lt;p&gt;When a heading is added to the notebook to accommodate new quotations or
+notes, it would be &amp;quot;hashed&amp;quot; (mentally) and the page number of the copy
+would be added to the corresponding slot in the hash table. Before
+creating a new heading, Locke would consult his index to see if he had
+already begun an page under that hash, and if so the copy would go
+there. Upon filling a spread, Locke would continue copying not on then
+next page (which might already have content), but on the &lt;em&gt;next blank
+spread&lt;/em&gt;, adding references to the new page number to the bottom of the
+filled page and to the front-matter index. By allowing headings to
+leapfrog each other, this method both minimizes page waste and tends to
+keep newer and more active material closer the last-filled pages of the
+book.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="analysis-of-the-hash-function"&gt;
+&lt;h2&gt;Analysis of the Hash Function&lt;/h2&gt;
+&lt;p&gt;I discovered and researched all of this with consideration of making a
+commonplace book for my own use, and I wondered if Locke's method would
+work for me as effectively as it did for many in the 18th century.&lt;/p&gt;
+&lt;p&gt;By standards of today's usage of hash functions, Locke's is beyond
+rudimentary. It has a grossly nonuniform distribution (being lashed to
+natural-language letter frequencies), and is thus riddled with the
+likelihood of collisions (see further analysis below). But it has an
+interesting property that no passable modern hash has (or needs): it is
+&lt;em&gt;intuitive&lt;/em&gt;.  That is to say, Locke (or anyone who used a similar
+method) could run across an interesting idea about algorithms, and think
+&amp;quot;Hmm, &lt;em&gt;Algorithms&lt;/em&gt;...  &lt;strong&gt;A&lt;/strong&gt;... (&lt;em&gt;l&lt;/em&gt;...  &lt;em&gt;g&lt;/em&gt;...) &lt;strong&gt;o&lt;/strong&gt;...&amp;quot; and
+immediately look up all the pages in his notebook where he or she might
+have copied or taken notes under &lt;em&gt;Algorithms&lt;/em&gt;. Certainly, those entries
+might be interspersed with entries about &lt;em&gt;Arrows&lt;/em&gt;, &lt;em&gt;Atomism&lt;/em&gt;,
+&lt;em&gt;Astronomy&lt;/em&gt;, and any other headings that hash to &lt;strong&gt;Ao&lt;/strong&gt;, but barring a
+terribly unlucky distribution of headwords, this does not seem like a
+major issue for a notebook-sized repository. It may even be considered a
+feature, if maintaining a commonplace book is also considered as an
+opportunity to make unexpected connections or explore and reflect on
+one's passage through reading.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="further-analysis"&gt;
+&lt;h2&gt;Further Analysis&lt;/h2&gt;
+&lt;p&gt;To get a sense of how bad Locke's hash distribution really is, I wrote
+some code to hash an input list of words and keep track of the hash
+table for some simple analysis. I then fed it a list of the 10,000 most
+commonly used words per Google n-grams -- which is admittedly probably
+not representative of words likely to end up as headings in someone's
+commonplace book.&lt;/p&gt;
+&lt;p&gt;Here's a histogram of the distribution (made using bitly's
+sweet little &lt;a href="#id4"&gt;&lt;span class="problematic" id="id5"&gt;`data_hacks`_&lt;/span&gt;&lt;/a&gt; commandline tools), with the 100 slots in 20
+bins:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ cat data.txt | histogram.py --buckets=20
+# NumSamples = 100; Min = 0.00; Max = 505.00
+# Mean = 96.590000; Variance = 6119.221900; SD = 78.225456; Median
+# 85.000000
+# each * represents a count of 1
+    0.0000 -    25.2500 [    13]: *************
+   25.2500 -    50.5000 [    16]: ****************
+   50.5000 -    75.7500 [    19]: *******************
+   75.7500 -   101.0000 [    16]: ****************
+  101.0000 -   126.2500 [    10]: **********
+  126.2500 -   151.5000 [     5]: *****
+  151.5000 -   176.7500 [    11]: ***********
+  176.7500 -   202.0000 [     2]: **
+  202.0000 -   227.2500 [     3]: ***
+  227.2500 -   252.5000 [     0]:
+  252.5000 -   277.7500 [     3]: ***
+  277.7500 -   303.0000 [     0]:
+  303.0000 -   328.2500 [     0]:
+  328.2500 -   353.5000 [     0]:
+  353.5000 -   378.7500 [     1]: *
+  378.7500 -   404.0000 [     0]:
+  404.0000 -   429.2500 [     0]:
+  429.2500 -   454.5000 [     0]:
+  454.5000 -   479.7500 [     0]:
+  479.7500 -   505.0000 [     1]: *
+&lt;/pre&gt;
+&lt;!-- data_hacks: http://github.com/bitly/data_hacks --&gt;
+&lt;p&gt;This is clearly nowhere near a uniform distribution. Here's a bar graph
+showing where the headings land in the hash table (the hashes are
+plotted in alphabetical order):&lt;/p&gt;
+&lt;!-- image: 2015-02-13_locke_index_bar.png --&gt;
+&lt;p&gt;It's hard to see the tick labels in that image, but the &lt;strong&gt;Co&lt;/strong&gt; and
+&lt;strong&gt;Re&lt;/strong&gt; hashes are by far the most used (this also accounts for the long
+tail on the histogram above). Significant showings are also made by
+&lt;strong&gt;Se&lt;/strong&gt;, &lt;strong&gt;Ca&lt;/strong&gt;, and &lt;strong&gt;Po&lt;/strong&gt; (with more the 250 occurrences apiece),
+followed by &lt;strong&gt;De&lt;/strong&gt;, &lt;strong&gt;Pa&lt;/strong&gt; and &lt;strong&gt;Sa&lt;/strong&gt; (with over 200 occurrences).
+Notice also that several of the &lt;strong&gt;X&lt;/strong&gt; and &lt;strong&gt;Z&lt;/strong&gt; hashes have fewer than 5
+occurrences -- not a huge surprise for English words. &lt;strong&gt;Zu&lt;/strong&gt; gets
+some love, but that's because &lt;strong&gt;Z&lt;/strong&gt; is merged with &lt;strong&gt;Q&lt;/strong&gt;, so all the
+Qu-words land in that bucket.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="stay-tuned"&gt;
+&lt;h2&gt;Stay tuned...&lt;/h2&gt;
+&lt;p&gt;A few ideas, none of them new, to take away from all this exploration:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Commonplacing is an interesting technique, possibly worth
+reconsidering for personal use.&lt;/li&gt;
+&lt;li&gt;John Locke was a cool guy, with influential ideas that turn up in
+unexpected places.&lt;/li&gt;
+&lt;li&gt;The organization and navigation of wildly proliferating data in the
+Renaiassance gave rise to solutions that prefigure some modern ones,
+including fixtures of computer science such as string hashing and
+databases.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In a future post I may present a bit more analysis and exploration of
+Locke's function, offer some tweaks to improve its distribution, and
+reflect on my own experience with a commonplace book. Until then, agile
+reading!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="system-messages section"&gt;
+&lt;h2&gt;Docutils System Messages&lt;/h2&gt;
+&lt;div class="system-message" id="id2"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;/home/ninly/src/projects/blog/content/2015-02-13_the-notebook-as-database.rst&lt;/tt&gt;, line 111); &lt;em&gt;&lt;a href="#id3"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Unknown target name: &amp;quot;here &amp;lt;http://www.historyofinformation.com/expanded.php?id=3744&amp;quot;.&lt;/div&gt;
+&lt;div class="system-message" id="id4"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;/home/ninly/src/projects/blog/content/2015-02-13_the-notebook-as-database.rst&lt;/tt&gt;, line 203); &lt;em&gt;&lt;a href="#id5"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Unknown target name: &amp;quot;data_hacks&amp;quot;.&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="algorithms"></category><category term="hashing"></category><category term="commonplacing"></category></entry><entry><title>More virtualenv (sans) magic</title><link href="http://ninly.github.io/posts/2014/12/more-virtualenv-sans-magic/" rel="alternate"></link><updated>2014-12-09T12:00:00-06:00</updated><author><name>ninly</name></author><id>tag:ninly.github.io,2014-12-09:posts/2014/12/more-virtualenv-sans-magic/</id><summary type="html">&lt;p&gt;Several months back I was figuring out how to use pip and virtualenv,
+and generally having a pretty good time with my python development
+experience. However, I kept running into interesting code examples and
+projects that required matplotlib and the numpy/scipy stack. Since I've
+also been trying to get familiar with mathematical modeling, analysis
+and visualization techniques, these are indispensable dependencies.&lt;/p&gt;
+&lt;p&gt;I could (and had) play with them &amp;quot;raw&amp;quot;, but ran into problems when I
+tried to enjoy the control and isolation afforded by virtualenv. Last
+week, though, in one of my periodic attempts to comb through dependency
+installations, I stumbled on &lt;a class="reference external" href="https://gist.github.com/fyears/7601881"&gt;this gist&lt;/a&gt;, and it cleared up all my
+problems. I haven't delved into whatever reasons may have existed for my
+previous difficulties, but if you're having trouble, maybe it will help
+you. All I did was to set up a new virtual env and pip-install my way
+through the list. It... just worked, for the most part (thanks,
+&lt;a class="reference external" href="https://www.fyears.org/"&gt;fyears&lt;/a&gt;!), although I did have to update some fortran-compiler stuff
+that numpy needed.&lt;/p&gt;
+</summary><category term="python"></category><category term="dependencies"></category></entry><entry><title>LabVIEW Break!</title><link href="http://ninly.github.io/posts/2014/07/labview-break/" rel="alternate"></link><updated>2014-07-01T07:10:00-05:00</updated><author><name>ninly</name></author><id>tag:ninly.github.io,2014-07-01:posts/2014/07/labview-break/</id><summary type="html">&lt;p&gt;As of a month or so ago I was still going strong with the Eudyptula
+Challenge tasks: building development kernels, hacking on dynamically
+loadable modules, exploring intricacies of git, and generally learning
+my way around the internal structures that make Linux tick.&lt;/p&gt;
+&lt;p&gt;I had just begun to really dig into the whole idea of concurrency and
+the mechanisms (locking and so forth) and race condition caveats the
+kernel and its documentation have to offer. Then something came up.&lt;/p&gt;
+&lt;div class="section" id="cutscene-with-bbq"&gt;
+&lt;h2&gt;Cutscene with BBQ&lt;/h2&gt;
+&lt;p&gt;Our local National Instruments LabVIEW User Group runs a pretty tight
+ship. I haven't used LabVIEW itself much (I have messed around with
+it quite a bit), but the test equipment I've been working with for
+the past couple of years runs on LabWindows/CVI -- NI's C environment
+(&amp;quot;C with training wheels&amp;quot;, a coworker of mine likes to say). So I'm
+not especially proficient in LabVIEW, but I do attend the user group
+meetings: There's usually a fairly interesting demonstration of its
+features or of some real-world deployment. The whole concept of dataflow
+programming is interesting to me for a few reasons, too, related in part
+to my longtime interest in audio processing -- cf. Pure Data, Max, even
+(going back a few extra years) Turbosynth.&lt;/p&gt;
+&lt;p&gt;And I'd be lying if I told you the free barbecue they brought into the
+meetings wasn't a factor.&lt;/p&gt;
+&lt;p&gt;Last year the user group offered its regular attendees the chance to
+take NI's CLAD certification exam at no cost. It took a little bit of
+study, but the CLAD is their entry-level certification. The exam is
+fairly basic, and I passed without much difficulty.&lt;/p&gt;
+&lt;p&gt;If you're not familiar with LabVIEW, it's pretty neat stuff. It's
+a full-featured high-level language, but the development interface
+is based on the concept of &lt;em&gt;dataflow&lt;/em&gt;. That is, instead of writing
+text-based code, you connect functional blocks together with graphical
+&amp;quot;wires&amp;quot;. It is used extensively in a number of industries, particularly
+in testing and industrial data-aquisition applications. If you're just a
+curious amateur the software isn't cheap, but if (like me) you work in
+an environment where it is available, it's worth checking out.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="would-you-like-an-exam-with-that"&gt;
+&lt;h2&gt;Would You Like an Exam with That?&lt;/h2&gt;
+&lt;p&gt;This spring they offered a similar opportunity, but for people who
+aready have the CLAD certification they offered the CLD exam -- their
+full professional development certification.&lt;/p&gt;
+&lt;p&gt;Great, I thought -- not a chance I should pass up. It normally costs
+about $400. &lt;em&gt;But&lt;/em&gt;... the CLD is a far more challenging exam. It's geared
+not only to proficiency, but to &lt;em&gt;facility&lt;/em&gt; with the software and its
+graphical language.&lt;/p&gt;
+&lt;p&gt;It's a 4-hour practical exam. They shut you in a room, give you
+a sealed spec for an application of nontrivial complexity (typical
+textbook state machines -- modelling behavior of systems like ATMs,
+vending machines, and so forth -- but with a lot of real-world-like
+functions, constraints, and corner cases). Without any external
+references or breaks, you have to build a working application.&lt;/p&gt;
+&lt;p&gt;Four hours may seem like a long time, but it's widely regarded as the
+most challenging aspect of the CLD exam. To implement the typically
+specified complexity in the time allotted, you really have to know
+your way around the software &lt;em&gt;and&lt;/em&gt; be able to make quick decisions about
+how to implement the application's logic.&lt;/p&gt;
+&lt;p&gt;There's not any wiggle room. You can't take breaks or use your phone. No
+Internet or reference manual is available (other than LabVIEW's built-in
+help). When time runs out, you save your code to a thumb drive, seal it
+in an envelope, and wait several weeks for an anonymous NI engineer to
+review your code. To fast-forward a bit: I took the exam back in May, and
+still haven't received my results.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cram-time"&gt;
+&lt;h2&gt;Cram Time&lt;/h2&gt;
+&lt;p&gt;As I mentioned, I haven't really used LabVIEW that much. When I heard that I
+could take the CLD exam for free, and that I only had a few weeks to prepare...
+I did a quick deep-dive into some LabVIEW books, familiarizing myself with some
+of the conventions and best practices for more intricate applications (things
+like event-driven logic, queued state machines, and producer-consumer
+frameworks, among others).&lt;/p&gt;
+&lt;p&gt;I learned a ton, but I would be shocked if I passed. That is really OK
+-- getting the certification would have been lovely, but the experience
+of preparing for and taking the exam were my primary goals. I got a
+whole lot out of it, not only in that little bout of self-training, but the
+exam itself was pretty eye-opening, too. Not only will I be far better
+prepared to approach the exam next time it is offered, but it has given
+me some ideas for things I could do with LabVIEW in the meantime.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="back-to-the-penguin"&gt;
+&lt;h2&gt;Back to the Penguin&lt;/h2&gt;
+&lt;p&gt;Of course, through all of that, my kernel-coding efforts were on hold.
+Since the CLD exam, I've spent the last few weeks refamiliarizing myself
+with the Eudyptula Challenge task I was on when I set it down. It took
+less time than I feared to find my bearings; I had been in the middle of
+Task 8, and submitted it just the other day. From what I understand, it
+takes about a week for Little to respond to that one (one of the more
+complex tasks), so I'm using the downtime to run through kernel-build
+processes again, as that's a skill that tends to languish when I don't
+use it regularly, and it's been a while. I have a feeling I'll be using
+it again soon.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="linux-kernel"></category><category term="labview"></category></entry><entry><title>Taking the Eudyptula Challenge</title><link href="http://ninly.github.io/posts/2014/03/eudyptula-challenge/" rel="alternate"></link><updated>2014-03-28T22:10:00-05:00</updated><author><name>ninly</name></author><id>tag:ninly.github.io,2014-03-28:posts/2014/03/eudyptula-challenge/</id><summary type="html">&lt;p&gt;It wasn't so long ago that I was pounding away on my Matasano Challenge
+code, and thinking about how I might write about the progress I was
+making. It was abstract, though -- progress to be sure, but a lot of
+the kind of thing you seem to learn when looking back at code you keyed
+several months prior. Painful in some ways, enlightening study in
+others.&lt;/p&gt;
+&lt;p&gt;I had already been distracted once, hence the several months. Somewhere
+in the midst of a &lt;em&gt;real&lt;/em&gt; course I had to take in a &lt;em&gt;real&lt;/em&gt; school
+(Matasano's efforts and organization are real, of course, but I didn't
+have to pay them money or depend on a certain grade for economic
+reasons) and the crush of raising a couple of infants who don't know
+a whole lot about cryptography or programming, my code fell to the
+wayside. I still hope to get back to it one day.&lt;/p&gt;
+&lt;p&gt;But something else happened recently, even as I was starting
+to delve back into the Matasano stuff. A &lt;a class="reference external" href="http://eudyptula-challenge.org/"&gt;new challenge&lt;/a&gt;, modeled on Matasano's approach, but
+geared toward Linux kernel hacking and many of the practical intricacies
+involved with the Linux kernel workflow: coding style, patch submission,
+and so on, as well as the long slog of learning how an operating system
+actually &lt;em&gt;works&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I found out about Eudyptula last month and signed right up. My free time
+has been wrapped around that axle ever since. Unfortunately, that means
+I'm not investing time in active FOSS projects or code I can share,
+which was a thing with Matasano, too. But I'm working on a foundation.&lt;/p&gt;
+&lt;p&gt;I'm still fascinated with cryptography, both practical and theoretical,
+and the kinds of tasks that Matasano was throwing at me were also
+especially useful in getting my head around some day-to-day code
+organization and workflow. But &lt;em&gt;system programming&lt;/em&gt; has always been a
+deeper interest of mine than some of the common learn-to-code tutorial
+stuff out there these days. My day job involves embedded systems and
+their designers, too, and I always had a strong inpulse for at least
+the idea of actually &lt;em&gt;developing&lt;/em&gt; the kinds of real-time systems I
+test and troubleshoot. But learning the low level has often felt
+pretty slow-going, and I haven't found a whole lot of programmatic,
+goal-oriented guidance. Eudyptula's little penguin seems, so far, to be
+providing just what I needed.&lt;/p&gt;
+&lt;p&gt;That's not to say he's making it &lt;em&gt;easy&lt;/em&gt;; it's still slow-going. But
+that's because the Linux kernel is massive and mindbogglingly complex.
+There's a sense of &lt;em&gt;progress&lt;/em&gt;, though, of what to read next, of what I'm
+missing. And #kernelnewbies (an IRC channel) is providing a good amount
+of assistance and perspective, too. There is a sense of goal in it all,
+too: The introductory email in the series suggests that after completing
+the exercises one should be equipped, if not to &lt;em&gt;be&lt;/em&gt; a kernel subsystem
+maintainer (heavens forbid!), at least to understand what the heck it is
+they do, and to be an active developer.&lt;/p&gt;
+&lt;p&gt;And in addition to all that personal practical coolness, we're talking
+about the Linux kernel: one of the most significant collaborative
+efforts in the history of cooperation. Perplexing at times, not without
+its barbs and pitfalls, but an effective sort of juggernaut that we all
+use and benefit from every day, whether or not we know it or think about
+it. And in its own interest of longevity, that juggernaut has produced
+this little spinoff; it's pretty exciting to be plugged into that.&lt;/p&gt;
+</summary><category term="linux-kernel"></category><category term="eudyptula"></category></entry><entry><title>Matasano Crypto Challenges, Exercise 13</title><link href="http://ninly.github.io/posts/2014/01/matasano-crypto-challenge-13/" rel="alternate"></link><updated>2014-01-31T18:30:00-06:00</updated><author><name>ninly</name></author><id>tag:ninly.github.io,2014-01-31:posts/2014/01/matasano-crypto-challenge-13/</id><summary type="html">&lt;p&gt;I started up this blog as a place to muse on current tech projects and
+share what I'm doing and learning. Then I went and got re-mired in my
+Matasano code, which I can't share.&lt;/p&gt;
+&lt;p&gt;Last spring, on a tip from &lt;a class="reference external" href="http://illruminations.com/"&gt;Steve&lt;/a&gt;, I spent a bunch of time working on the then-brand-new
+&lt;a class="reference external" href="http://www.matasano.com/articles/crypto-challenges/"&gt;Matasano Crypto Challenges&lt;/a&gt;, which you should go read about if you're
+not already familiar.&lt;/p&gt;
+&lt;p&gt;It was perfect for me in a lot of ways. In addition to my longstanding
+interest in things cryptological, it was a perfect venue to try my hand
+at more &amp;quot;practical&amp;quot; code, as I described in a &lt;a class="reference external" href="http://ninly.github.io/posts/2014/01/pip-and-virtualenv-sans-magic/"&gt;previous post&lt;/a&gt;. The
+exercises are (more or less) graded, and in many cases tell you roughly
+how you're going to approach the goal. I plugged at the first set of
+exercises for a few days, and felt like I'd wrapped my head around
+something new. I finished the first set and received the second, and
+things got even more interesting.&lt;/p&gt;
+&lt;p&gt;Without revealing any content, I'll say that exercise 12 was
+particularly fun, engaging, and rewarding to accomplish. I felt quite a
+bit of momentum, and ready to tackle whatever came at me.&lt;/p&gt;
+&lt;p&gt;Then, I hit exercise 13. I got stuck.&lt;/p&gt;
+&lt;p&gt;I think the exercise assumed a certain level of practical familiarity
+with web-transaction infrastructure. &lt;a class="footnote-reference" href="#id2" id="id1"&gt;[*]&lt;/a&gt; User authentication, cookies,
+that sort of thing. I know more or less how that stuff works, but have
+little hands-on experience actually implementing them for a production
+website. Building on what I'd learned from the exercises thus far, I
+quickly sort of painted myself into a corner, feeling like every avenue
+I pursued wound up a dead end.&lt;/p&gt;
+&lt;p&gt;Having a brand-new baby in the house also didn't help. Time devoted to
+the project evaporated for a time.&lt;/p&gt;
+&lt;p&gt;There was a HDD failure on my dev/hacking machine, too, but that's
+another post.&lt;/p&gt;
+&lt;p&gt;This week, after several months away from the code, I revisited the
+Matasano Crypto Challenges. I worked through my existing code, reminding
+myself what I'd done and how. I reimplemented a few functions, just to
+see if different ways to do things seemed cleaner or appealed more.
+Some did. And, as a lot of coders say, reading your own code months or
+years later can be painful, but also eye-opening.&lt;/p&gt;
+&lt;p&gt;Then I approached that sticky wicket, exercise 13, with a fresh mind. I
+didn't even look at the code I'd written for it; I just reread the
+assignment, and started coding.&lt;/p&gt;
+&lt;p&gt;I got my test code to pass yesterday. Turns out, it wasn't that bad.  My
+solution isn't perfect: I'm not entirely happy with some of the
+assumptions it makes (again, I'm trying not to reveal anything about the
+exercise content here), but it works, and at least I have something to
+improve on now.&lt;/p&gt;
+&lt;p&gt;And, best of all, now I get to think about exercise 14.&lt;/p&gt;
+&lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[*]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;See &lt;a class="reference external" href="https://blog.pinboard.in/2013/04/the_matasano_crypto_challenges/"&gt;this Pinboard blog post&lt;/a&gt; for a good description of the Matasano Crypto Challenges by someone who &lt;em&gt;does&lt;/em&gt; have that familiarity.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</summary><category term="crypto"></category></entry><entry><title>Setting up Pelican</title><link href="http://ninly.github.io/posts/2014/01/setting-up-pelican/" rel="alternate"></link><updated>2014-01-17T03:30:00-06:00</updated><author><name>ninly</name></author><id>tag:ninly.github.io,2014-01-17:posts/2014/01/setting-up-pelican/</id><summary type="html">&lt;p&gt;So here it is, a blog, live and loaded with some content! Like magic.&lt;/p&gt;
+&lt;p&gt;I will not go into much detail here about the setup of this site or how
+I got here, but a few resources did help me quite a bit along the way.
+Among them (and I've probably missed a one or two):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://getpelican.com/"&gt;Pelican itself&lt;/a&gt;, of course&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://duncanlock.net/blog/2013/05/17/how-i-built-this-website-using-pelican-part-1-setup/"&gt;Duncan Lock&lt;/a&gt;, whose post got me down the road a good long way -- but
+who still owes us a Part 2!&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://terriyu.info/blog/posts/2013/07/pelican-setup/"&gt;Terri Yu&lt;/a&gt;, whose post also helped me muck through the pelican setup&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://gist.github.com/josefjezek/6053301"&gt;How to use Pelican on GitHub Pages&lt;/a&gt;, by Josef Jezek, with additional
+details about ghp-import in &lt;a class="reference external" href="https://github.com/getpelican/pelican/blob/master/docs/tips.rst"&gt;these tips&lt;/a&gt; from the Pelican docs&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://kecebongsoft.com/"&gt;Dedi Purwanto&lt;/a&gt;, mostly for the &lt;a class="reference external" href="https://github.com/getpelican/pelican-themes/tree/master/cebong"&gt;theme&lt;/a&gt;, but nice blog, too :)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In practice, the real work had more to do with deciding how to host
+and organize my content, and recommendations are thin for that sort
+of thing. That seems appropriate to a static-site generator such as
+pelican. The whole point: you do it however you want. It's not &lt;em&gt;that&lt;/em&gt;
+hard, after all.&lt;/p&gt;
+&lt;p&gt;As such, assuming this project sticks around awhile, it will probably
+be a casual work in progress for some time. Since what I'm after is
+a simple dumping ground for ideas, development progress, and makery
+learnings, I hope to remain focused more on content and ideas, rather
+than packaging and presentation (except insofar as these constitute
+makery learnings). But do contact me if you have any recommendations
+or notice something I've obviously overlooked.&lt;/p&gt;
+&lt;p&gt;A few honorable mentions and bookmarks: blog posts and articles about
+pelican, static-site generators, and devblogging in general that I
+didn't use explicitly when initially setting up this site, but which
+I've come across and expect to come back to:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Helder Correira's &lt;a class="reference external" href="http://heldercorreia.com/blog/from-wordpress-to-pelican"&gt;From Wordpress to Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Geoff Gimse's intriguingly titled &lt;a class="reference external" href="http://www.textandhubris.com"&gt;Text and Hubris&lt;/a&gt; (several posts,
+but the &lt;a class="reference external" href="http://www.textandhubris.com/tag/pelican"&gt;pelican-tagged articles&lt;/a&gt; are a place to start)&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="blog"></category></entry><entry><title>Pip and virtualenv sans magic</title><link href="http://ninly.github.io/posts/2014/01/pip-and-virtualenv-sans-magic/" rel="alternate"></link><updated>2014-01-04T12:00:00-06:00</updated><author><name>ninly</name></author><id>tag:ninly.github.io,2014-01-04:posts/2014/01/pip-and-virtualenv-sans-magic/</id><summary type="html">&lt;p&gt;I'm trying to bridge the gap between understanding the syntax of Python (among another language or three) and &lt;em&gt;how to develop&lt;/em&gt; in them. To wit, I was setting up some of the standard tools for package management on my Arch Linux system, and having a little trouble understanding why I was getting permissions errors while following several of the pip/virtualenv tutorials out there.&lt;/p&gt;
+&lt;p&gt;Jamie Matthews's post at &lt;a class="reference external" href="http://dabapps.com/blog/introduction-to-pip-and-virtualenv-python/"&gt;dabapps&lt;/a&gt; did a lot to clear up a lot of whatever was throwing me off.&lt;/p&gt;
+</summary><category term="python"></category></entry><entry><title>call("o muse");</title><link href="http://ninly.github.io/posts/2014/01/call-o-muse/" rel="alternate"></link><updated>2014-01-01T10:20:00-06:00</updated><author><name>ninly</name></author><id>tag:ninly.github.io,2014-01-01:posts/2014/01/call-o-muse/</id><summary type="html">&lt;p&gt;I didn't actually write this post on New Year's Day, nor does this blog have much to do with the new year, but it's a convenient and timely starting point. So,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello world!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I think I'm like a lot of people who use static-blog engines (pelican, jekyll, etc.), in that I'm no longer very thrilled with available hosted services. Intermittently, I've wanted a place to record thoughts and progress specifically related to my efforts to learn technological skills, particularly coding and electronics. To that end, I'm not really looking for the kind of &amp;quot;social&amp;quot; experience offered by a Blogger, Tumblr, or Twitter -- but on the other hand, I'd like something more dynamic, versioned, and publicly accessible than personal pen-and-paper diary or development notebook. I'd like an easy way both to look back over what I've done and how far I have (or haven't) come with a project, as well as an easy resource to share with people who may be interested in that progress.&lt;/p&gt;
+&lt;p&gt;As such, don't look here for subtle, crafted prose and public relations. Just notes, some thoughts, nods to the helpful posts and pages of other developers, and probably a few bookmark-like links to help me remember helpful resources. However, you are welcome here; If any of this content is helpful to you, then all the more benefit!&lt;/p&gt;
+</summary><category term="blog"></category></entry></feed>

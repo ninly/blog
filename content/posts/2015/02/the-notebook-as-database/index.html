@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>The Notebook as Database: John Locke, Commonplacing, and Hash Functions</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="http://ninly.github.io/theme/css/main.css" type="text/css" />
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="http://ninly.github.io/css/ie.css"/>
+                <script src="http://ninly.github.io/js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="http://ninly.github.io/css/ie6.css"/><![endif]-->
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://ninly.github.io">ninly&rsquo;s bog </a></h1>
+                <nav>
+                    <a href="http://ninly.github.io/pages/about-ninly.html">about ninly</a>&nbsp;
+                    <a href="http://ninly.github.io/category/misc">misc</a>&nbsp;
+                </nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="posts/2015/02/the-notebook-as-database/" rel="bookmark"
+           title="Permalink to The Notebook as Database: John Locke, Commonplacing, and Hash Functions">The Notebook as Database: John Locke, Commonplacing, and Hash Functions</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-02-13T00:00:00">
+                13 February 2015
+        </abbr>
+<p>tags: <a href="http://ninly.github.io/tag/algorithms/">algorithms</a><a href="http://ninly.github.io/tag/hashing/">hashing</a><a href="http://ninly.github.io/tag/commonplacing/">commonplacing</a></p></footer><!-- /.post-info -->      <p>A couple of months ago I stumbled by happy accident onto the topic of
+<em>keeping a commonplace book</em>, or <em>commonplacing</em>. While this did call up
+vague memories of reading about commonplace books in my earlier life as
+a Humanities student, I had fully appreciated neither its power as a
+tool for memory and worldview-organization nor (and more to the point
+here) its kinship with a host of techniques used today for organizing
+large bodies of data.</p>
+<div class="section" id="commonplace-books">
+<h2>Commonplace Books</h2>
+<p>If you are not familiar with the reading practices of the Renaissance
+and the early modern periods, a <em>commonplace book</em> was essentially a
+notebook, kept by habitual readers, for hand-copying quotations from
+their reading. Such quotations would be entered under headings that were
+governed in part by the worldview of the day -- the &quot;common places&quot; (the
+word comes from <em>locis communis</em> in Latin, or <em>topos koinos</em> in Greek,
+and the technique descends from the copybooks used in studying those
+languages). Later on, as literacy spread to greater populations, the
+practice morphed toward something more like the modern scrapbook.</p>
+<p>This is a rich and varied topic; much has been written about
+commonplacing as a technique for interacting with one's reading and, as
+I suggested above, organizing a worldview within a cultural context. As
+introduced by : TODO: cite source.</p>
+<blockquote>
+Renaissance readers, writers, and speakers were well-trained in
+textual recycling, and one of their most powerful and pervasive
+tools was the ‘commonplace book’ - a collection of notes from
+reading and other sources that the compiler might want to recall,
+and reuse, at a later date. While the structure and purpose of these
+volumes varied enormously, they were distinguished from random
+collections of quotations (in theory, at least) by being gathered
+under conventional headings called loci communes or ‘common places’.
+As Ann Moss has explained, &quot;The more elementary
+commonplace-books ... would be divided into sections under heads listing
+the main virtues and vices, and all their subsidiary manifestations.
+More advanced commonplace-books might have ambitious programmes for
+covering all knowledge, or they might be specialist repertories of
+excerpts relevant to specific disciplines&quot; (<em>Printed
+Commonplace-Books and the Structuring of Renaissance Thought</em>,
+Oxford: Clarendon Press, 1996, v). The headings could be tailored to
+an individual’s personal or professional needs, suggested by
+teachers, or bought in blank-books with printed headings and
+decorative borders - and readers who did not have the patience or
+the resources to gather their own entries could even buy a book with
+the quotations already printed or written in. <a class="reference external" href="http://www.ampltd.co.uk/collections_az/RenCpbks-BL/editorial-introduction.aspx">[source]</a></blockquote>
+<p><a class="reference external" href="http://3stages.org/quotes/cpb.html">Here</a> are some other quotations
+about commonplace books -- a web search will turn up much more if you're
+interested in the historical context and practice. The noteworthy part
+for me here is the notion that the technique was a practice -- a
+technology -- related to <em>memory</em>, an early-modern <em>ars memorativa</em>,
+even. The &quot;commonplacer&quot; keeps notes for later review and use,
+whether to deploy in one's own writing (in a day when authoritative
+quotation had a completely different quality and import than it has
+today) or for organizing one's personal reception and perception of
+significant ideas, also to be reviewed when musing on one's development.</p>
+<p>This practice grew in the early days of print media and widespread
+literacy, when the proliferation of text would have been as daunting as
+it was exciting to an avid reader (of course, cf. the parallels with
+today's networked explosion of content and its attendant big- and
+metadata). Agile readers used whatever methods they devised or found
+available to keep track and make sense of their reading amid this
+proliferation of text and idea, in hopes that they could dredge it up
+when the reference was needed.</p>
+<p>Essentially, it was a technique for <em>cataloging</em> information that has made
+a personal inmpression.</p>
+</div>
+<div class="section" id="locke-s-hash-function">
+<h2>Locke's hash function</h2>
+<p>This all sort of caught my imagination because when I learned about how
+and why commonplace books were kept, I kept thinking of the whole thing
+as like a &quot;manual database&quot; for personal reading.</p>
+<p>The practice of commonplacing was stoked when, in 1685, Enlightenment
+thinker John Locke published a method he had devised for organizing
+entries into his own commonplace book. Essentially, he added a technique
+of <em>indexing</em> to the <em>cataloging</em> that was already inherent in
+commonplacing technique. But because a commonplace book is (a) a
+physical book, and (b) essentially a work-in-progress, its headings
+chosen on the fly as one cleaves headlong through a sea of text,
+preparing one's commonplace notebook presented a challenge -- one didn't
+know in advance precisely what ideas would be making an impression, and
+thus what headings would be needed, without taking a shot in the dark.
+Some did try -- presuming that their copying would fit into a
+religiously or philosophically determined rubric. There is more
+interesting history here, but I'll not delve into it.</p>
+<p>Locke's method cinched my comparison with a database: he basically
+invented a rudimentary hash function, and put a hash table in the front
+matter of his notebook. <em>Et voilà</em>, the notebook as database!</p>
+<p>I'm not familiar enough with the history of cataloging or information
+and organization to know if this had any direct precursors or cousins in
+contemporary practice, but I've been on the lookout for similar
+organizational practices, or other ideas that prefigured the modern hash
+function in the predigital world. Let me know if you know of anything.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/ninly/src/projects/blog/content/2015-02-13_the-notebook-as-database.rst</tt>, line 2); <em><a href="#id1">backlink</a></em></p>
+Duplicate explicit target name: &quot;here&quot;.</div>
+<p>Locke's method is described in some detail
+<a href="#id2"><span class="problematic" id="id3">`here &lt;http://www.historyofinformation.com/expanded.php?id=3744`_</span></a>
+with quotations from Locke himself. A facsimile and transcription of the
+book where his method was originally published are
+<a class="reference external" href="http://pds.lib.harvard.edu/pds/view/13925922">here</a>
+But in short, this is how the hash function works:</p>
+<p>Given a commonplace heading (Locke calls it a Head, and his example is
+'Epistle'), the gist is this:</p>
+<ol class="arabic simple">
+<li>Take the first letter of the heading (e.g. <em>Epistle</em> -&gt; <strong>E</strong>)</li>
+<li>Append to it the <em>next</em> vowel that occurs in the heading (e.g. <em>Epistle</em> -&gt; <strong>Ei</strong>)</li>
+<li>If the word begins with a vowel but does not contain a subsequent
+vowel, double the initial (e.g. <em>Arts</em> -&gt; <strong>Aa</strong>)</li>
+</ol>
+<p>Other cases are not covered, and because this isn't a comprehensive
+algorithm for an automated system, that would not cause much difficulty
+in the overall use case. The main exception I can think of -- a word
+with all consonants -- would probably never have been encountered (this
+was before the ubiquity of acronyms, after all). Many people would
+probably have organized their notes under Latin headings, too (Locke
+specifically recommends keeping it to <em>one</em> language, an amusing hint at
+the kind of organizational challenges his scholarly contemporaries
+faced).  Notably, <em>y</em>-as-a-vowel is not handled.</p>
+<p>But here we are, with a number of &quot;hash buckets&quot; equal to the number of
+word-initial letters used, times five vowels.</p>
+<p>For Locke's own notebook (in part because orthography was just
+different, and possibly Latin, in those days) he omitted/merged a few
+initials -- J and I, for instance, share a bucket in his system --
+bringing the number of potential initials down to 20. This enabled Locke
+to construct a convenient 4X5 grid of consonants which, when folded with
+the 5 vowels, rendered a 100-slot hash space. Locke describes using
+black and read lead to draw the resulting table in the beginning of his
+notebook which, along with a few additional techniques for pagination
+and pageflow, would serve as <a class="reference external" href="http://idmaa.org/wp-content/uploads/2013/03/Brian-J.-McNely-2.jpg">its index</a>,
+much as a hash table does in database or other software. Note that this
+page is from a <em>printed</em> book explaining and illustrating how he did it,
+whereas the technique itself was a manual one.</p>
+<p>When a heading is added to the notebook to accommodate new quotations or
+notes, it would be &quot;hashed&quot; (mentally) and the page number of the copy
+would be added to the corresponding slot in the hash table. Before
+creating a new heading, Locke would consult his index to see if he had
+already begun an page under that hash, and if so the copy would go
+there. Upon filling a spread, Locke would continue copying not on then
+next page (which might already have content), but on the <em>next blank
+spread</em>, adding references to the new page number to the bottom of the
+filled page and to the front-matter index. By allowing headings to
+leapfrog each other, this method both minimizes page waste and tends to
+keep newer and more active material closer the last-filled pages of the
+book.</p>
+</div>
+<div class="section" id="analysis-of-the-hash-function">
+<h2>Analysis of the Hash Function</h2>
+<p>I discovered and researched all of this with consideration of making a
+commonplace book for my own use, and I wondered if Locke's method would
+work for me as effectively as it did for many in the 18th century.</p>
+<p>By standards of today's usage of hash functions, Locke's is beyond
+rudimentary. It has a grossly nonuniform distribution (being lashed to
+natural-language letter frequencies), and is thus riddled with the
+likelihood of collisions (see further analysis below). But it has an
+interesting property that no passable modern hash has (or needs): it is
+<em>intuitive</em>.  That is to say, Locke (or anyone who used a similar
+method) could run across an interesting idea about algorithms, and think
+&quot;Hmm, <em>Algorithms</em>...  <strong>A</strong>... (<em>l</em>...  <em>g</em>...) <strong>o</strong>...&quot; and
+immediately look up all the pages in his notebook where he or she might
+have copied or taken notes under <em>Algorithms</em>. Certainly, those entries
+might be interspersed with entries about <em>Arrows</em>, <em>Atomism</em>,
+<em>Astronomy</em>, and any other headings that hash to <strong>Ao</strong>, but barring a
+terribly unlucky distribution of headwords, this does not seem like a
+major issue for a notebook-sized repository. It may even be considered a
+feature, if maintaining a commonplace book is also considered as an
+opportunity to make unexpected connections or explore and reflect on
+one's passage through reading.</p>
+</div>
+<div class="section" id="further-analysis">
+<h2>Further Analysis</h2>
+<p>To get a sense of how bad Locke's hash distribution really is, I wrote
+some code to hash an input list of words and keep track of the hash
+table for some simple analysis. I then fed it a list of the 10,000 most
+commonly used words per Google n-grams -- which is admittedly probably
+not representative of words likely to end up as headings in someone's
+commonplace book.</p>
+<p>Here's a histogram of the distribution (made using bitly's
+sweet little <a href="#id4"><span class="problematic" id="id5">`data_hacks`_</span></a> commandline tools), with the 100 slots in 20
+bins:</p>
+<pre class="literal-block">
+$ cat data.txt | histogram.py --buckets=20
+# NumSamples = 100; Min = 0.00; Max = 505.00
+# Mean = 96.590000; Variance = 6119.221900; SD = 78.225456; Median
+# 85.000000
+# each * represents a count of 1
+    0.0000 -    25.2500 [    13]: *************
+   25.2500 -    50.5000 [    16]: ****************
+   50.5000 -    75.7500 [    19]: *******************
+   75.7500 -   101.0000 [    16]: ****************
+  101.0000 -   126.2500 [    10]: **********
+  126.2500 -   151.5000 [     5]: *****
+  151.5000 -   176.7500 [    11]: ***********
+  176.7500 -   202.0000 [     2]: **
+  202.0000 -   227.2500 [     3]: ***
+  227.2500 -   252.5000 [     0]:
+  252.5000 -   277.7500 [     3]: ***
+  277.7500 -   303.0000 [     0]:
+  303.0000 -   328.2500 [     0]:
+  328.2500 -   353.5000 [     0]:
+  353.5000 -   378.7500 [     1]: *
+  378.7500 -   404.0000 [     0]:
+  404.0000 -   429.2500 [     0]:
+  429.2500 -   454.5000 [     0]:
+  454.5000 -   479.7500 [     0]:
+  479.7500 -   505.0000 [     1]: *
+</pre>
+<!-- data_hacks: http://github.com/bitly/data_hacks -->
+<p>This is clearly nowhere near a uniform distribution. Here's a bar graph
+showing where the headings land in the hash table (the hashes are
+plotted in alphabetical order):</p>
+<!-- image: 2015-02-13_locke_index_bar.png -->
+<p>It's hard to see the tick labels in that image, but the <strong>Co</strong> and
+<strong>Re</strong> hashes are by far the most used (this also accounts for the long
+tail on the histogram above). Significant showings are also made by
+<strong>Se</strong>, <strong>Ca</strong>, and <strong>Po</strong> (with more the 250 occurrences apiece),
+followed by <strong>De</strong>, <strong>Pa</strong> and <strong>Sa</strong> (with over 200 occurrences).
+Notice also that several of the <strong>X</strong> and <strong>Z</strong> hashes have fewer than 5
+occurrences -- not a huge surprise for English words. <strong>Zu</strong> gets
+some love, but that's because <strong>Z</strong> is merged with <strong>Q</strong>, so all the
+Qu-words land in that bucket.</p>
+</div>
+<div class="section" id="stay-tuned">
+<h2>Stay tuned...</h2>
+<p>A few ideas, none of them new, to take away from all this exploration:</p>
+<ol class="arabic simple">
+<li>Commonplacing is an interesting technique, possibly worth
+reconsidering for personal use.</li>
+<li>John Locke was a cool guy, with influential ideas that turn up in
+unexpected places.</li>
+<li>The organization and navigation of wildly proliferating data in the
+Renaiassance gave rise to solutions that prefigure some modern ones,
+including fixtures of computer science such as string hashing and
+databases.</li>
+</ol>
+<p>In a future post I may present a bit more analysis and exploration of
+Locke's function, offer some tweaks to improve its distribution, and
+reflect on my own experience with a commonplace book. Until then, agile
+reading!</p>
+</div>
+<div class="system-messages section">
+<h2>Docutils System Messages</h2>
+<div class="system-message" id="id2">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/ninly/src/projects/blog/content/2015-02-13_the-notebook-as-database.rst</tt>, line 111); <em><a href="#id3">backlink</a></em></p>
+Unknown target name: &quot;here &lt;http://www.historyofinformation.com/expanded.php?id=3744&quot;.</div>
+<div class="system-message" id="id4">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/ninly/src/projects/blog/content/2015-02-13_the-notebook-as-database.rst</tt>, line 203); <em><a href="#id5">backlink</a></em></p>
+Unknown target name: &quot;data_hacks&quot;.</div>
+</div>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://illruminations.com/">illruminations</a></li>
+                            <li><a href="http://www.commandlinefu.com/">commandlinefu.com</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://ninly.github.io/" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="https://keybase.io/ninly">keybase</a></li>
+                            <li><a href="https://github.com/ninly">github</a></li>
+                            <li><a href="https://twitter.com/ninly">twitter</a></li>
+                            <li><a href="https://plus.google.com/+JasonConklin">g+</a></li>
+                            <li><a href="https://last.fm/ninly">last.fm</a></li>
+                            <li><a href="https://ninly.tumblr.com">tumblr</a></li>
+                            <li><a href="https://soundcloud.com/ninly">soundcloud</a></li>
+                            <li><a href="https://semiautomaticgroundenvironment.bandcamp.com">bandcamp</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                     Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://github.com/getpelican/pelican-themes" target="_blank">cebong</a>.
+                </address><!-- /#about -->
+
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
