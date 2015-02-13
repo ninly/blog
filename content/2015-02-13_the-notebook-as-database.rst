@@ -66,14 +66,15 @@ quotation had a completely different quality and import than it has
 today) or for organizing one's personal reception and perception of
 significant ideas, also to be reviewed when musing on one's development.
 
-This practice grew in the early days of print media and widespread
-literacy, when the proliferation of text would have been as daunting as
-it was exciting to an avid reader (of course, cf. the parallels with
-today's networked explosion of content and its attendant big- and
-metadata). Agile readers used whatever methods they devised or found
+This practice grew in the early days of print media and (more)
+widespread literacy, when the proliferation of text would have been as
+daunting as it was exciting to an avid reader (of course, cf.  parallels
+with today's networked explosion of content and its attendant meta- and
+big data). Agile readers used whatever methods they might devise or find
 available to keep track and make sense of their reading amid this
 proliferation of text and idea, in hopes that they could dredge it up
-when the reference was needed.
+when the reference was needed, and possibly even keep their heads above
+water in making personal sense out of so much information.
 
 Essentially, it was a technique for *cataloging* information that has made
 a personal inmpression.
